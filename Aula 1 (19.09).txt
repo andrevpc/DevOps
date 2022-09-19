@@ -1,0 +1,36 @@
+DevOps
+Softwares: conjunto de regras bem definidas para atingir um objetivo, ou seja, é um
+serviço computacional utilizado para realizar ações nos sistemas de computadores
+(aplicativos)
+
+Servidores: É um computador potente e equipado com um ou mais processadores, bancos
+de memória, portas de comunicação, softwares e, ocasionalmente, algum sistema para
+armazenamento de dados, como hard disks internos ou memórias SSD.
+
+Servidores web: É o computador que armazena arquivos que compoê sites (http - linguagem)
+
+API: Interface de aplicações que pode comunicar-se com outros sistemas (banco de dados..)
+como num restaurante, voccê pede para um garçom a comida, o API é o garçom. É utilizada
+para se conseguir recuperar somente o valor necessitado num banco de dados de um site.
+Usa-se para comunicar o backend (programação) com o frontend (interface)
+
+Framework: Essa estrutura é feita para resolver um problema específico, um modelo de
+regras "boas praticas" para guiar e como gerenciar processos. Funciona como uma espécie de
+template ou modelo que, quando utilizado, oferece certos artifícios e elementos
+estruturais básicos para a criação de alguma aplicação ou software. Ele serve para
+facilitar o processo de desenvolvimento de um software ou aplicação. A diferença entre ele
+e biblioteca é que podemos trazer funções de bibliotecas e framework devemos usar todo ele
+
+DevOps: Não é um produto, nem uma Coisa. É um conceito abstrato e adaptável de áreas como
+de Desenvolvimento e Operações/infraestrutura deve interagir
+
+Modelo de desenvolvimento - Cascata: para adcionar uma nova feature (funcionalidade),
+faz-se isso no inicio, bugfix arrumam um bug existentes no meio do processo e hotfix
+arruma um bug na hora da produção (final) - a produção segue enquanto o erro é copiado
+para um arquivo de correção para ser corrigido
+Esse era o modelo pré-DevOps
+Definição -> Desenvolvimento -> Manutenção
+
+DevOps: (Planejar -> Codificar -> Construir -> Testar) Dev -> Ops (Lançar -> Implementar
+-> Operar -> Monitorar) -> Volta ao início
+Filosofia, cultura, ferramenta e praticas para integrar o DevOps
