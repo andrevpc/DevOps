@@ -1,0 +1,19 @@
+Professor Guilherme Lemos
+
+2011: Equipes bem separadas (dev, ops, banco...), muito tempo entre os deploys (ir para a
+produção, lançado no servidor) e processos manuais (equipe de testes)
+Coisas que mudaram o processo: Internet rápida, internet móvel, atualizações constantes e
+multidispositivos
+Github: sistema de versionamento (Cria copias para que varias pessoas mudem o sistema ao
+mesmo tempo)
+DevSecOps também existe (segurança)
+Pipeline: processo de automação ao subir um arquivo (faz algo ao subir, tipo uma função),
+lançando a atualização a maquina testa o erro e se der erro já reinstala a versão antiga,
+verifica se o código está dentro do padrão da empresa
+-C.I (Continuous Integration): Integração contínua dos microserviços
+-C.D (Continuous Develop): Desenvolvimento contínuo
+Ferramentas fundamentais: Métodologia ágil, sistema versionamento e cloud
+
+Metodologias: Cascata: depende do fim de uma etapa para passar para outra, segue uma
+sequência engessada
+Agil: Muito usada em TI
