@@ -1,0 +1,34 @@
+Cloud: Acesso remoto a arquivos
+-IaaS: Infraestrutura como um serviço (Amazon Web Services (AWS))
+-PaaS: Plataforma como um serviço (Google App Engine)
+-SaaS: Software como serviço (Spotify)
+-P2P: Peer to peer (computador para computador), sem parar em um servidor
+Sistema de versionamento:  cópias (versões) para varias pessoas editarem um arquivo ao
+mesmo tempo, github (pull request, commit, fork - baixar cópia de projetos...)
+
+Componentes de computador:
+Processador (CPU) entende binário (base 2), se comunica com um sistema de eletrcidade
+(bit), com ou sem eletrecidade (8 bits = 1 bite), ele só entende pegar e guardar, +-*/,
+comparar e escrever
+
+Tipos de código
+Compilado: Um livro está em inglês, para traduzi-lo para portugues, temos que traduzir
+tudo, para depois lançar, se quiser lançar com alguma mudança deve traduzir tudo de novo
+Interpretado: Se alguém vier falar inglês e precisa de um tradutor, então ele pega pedaços
+e já interpreta em blocos para binario, depois manda para a maquina, sempre devemos ter o
+interpretador para que a maquina execute
+Java: Cria uma maquina virtual e roda o código nela
+
+Memória
+ROM: Memória não volatil (Armário)
+RAM: Memória volatil (desligou o computador acabou)(Bancada, fazendo alguma receita, ao
+acabar, joga fora), aqui é salva as variáveis, que fica em algum endereço de memória e se
+queremos mudar o valor de alguma variável, ele sobreescreve o valor antigo (perdeu), se
+dentro de alguma função a nova variável é salva em um novo endereço
+
+Abrir o Word, vai na ROM, pega o arquivo lá e coloca na RAM
+
+Processador
+UC: Unidade de controle, recebe o comando em Assembly e gerencia a entrada e saida
+ULA: Unidade Lógica Aritmética, faz os calculos e comparações lógicas
+Registrador: Armazena o endereço de memória onde estão as informações
