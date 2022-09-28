@@ -1,0 +1,28 @@
+Ontem: ROM (arquivos em vários endereços de memória), RAM (tudo que está em uso) e CPU
+(processador, registra o endereço de memória usada no momento, ele faz uma coisa de cada
+vez, mas é tão rapida que parece que ele está fzendo simultaneamente)
+RAM: 2^32 bytes (1 byte = 8 bits) de endereços (cada armazena uma palavra) = 4GB
+Com 1 byte, usamos 7 bits para escrever números em binário (-128->127), o último bit, usa-
+-se para saber se é positivo ou negativo, na maioria das linguagens o int ocupa 4 bytes,
+char ocupa 1 byte e float 32 bits usa de notação cientifica, 1 bit para +-, 8 bits para o
+expoente e 23 para o coeficiente
+Virtualização de maquina: Hypervisor: criar virtualmente computadores (sistema operacional
+), usa-se para rodar vários projetos ao mesmo tempo, para que não haja conflitos (isolar o
+banco de dados)
+IaC (Infraestrutura como código): Antes: O uso da virtualização era feita a mão-> Demorado
+custoso e arriscado (manual tem chance de erro). Agora: como a maquina é virtual, podemos
+passar comandos para ela ao ser iniciada, como baixar programas e limitar o uso do
+processador dela, automatização, quem é a junção dos aplicativos:
+Virtual Box: Cria a maquina virtual
+Vagrant: Você programa ele e ele cria, automatizadamente a maquina virtual como você quer
+(o que baixar, memória que terá, as portas que ele terá...) - Vagrant up
+
+Provisionar: Baixar os aplicativos na maqunina virtual
+
+Multi-Machine: Abrir várias maquinas ao mesmo tempo, cada um rodando um programa
+
+Container: Ele virtualiza softwares e tudo necessário para roda-lo mas sem precisar
+utilizar um novo sistema operacional, ele usa o próprio do computador, é usado para que
+não haja conflitos, ex: rodar versões antigas de aplicativos junto com a mais nova, ele
+engana a aplicação, que pensa estar sozinha na maquina e ter apenas um pedaço dsa memória,
+ou seja, ela vê o que nós programamos para ela ver
