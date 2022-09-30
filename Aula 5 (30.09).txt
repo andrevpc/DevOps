@@ -1,0 +1,14 @@
+Product Backlog: Lista de tarefas que tem um determinado prazo para ser entregue,  acompanhar de perto o andamento de cada projeto, trabalho seja organizado por etapas, como um fluxograma de processo
+Sprint backlog: ordem de reuniões, ela envolve::
+Review meeting: Perto de acabar a sprint tem uma reunião para entregar ao cliente e ver o que o cliente achou
+Retrospectiva: Logo após a review meeting, a equipe se junta (sem o cliente) e veem como melhorar (melhoria contínua)
+Planning meeting: planeja a nova sprint (logo depois do fim da sprint anterior)
+Daily Scrum: O que fez no dia anterior, o que fará hoje e dificuldades (não se discute a sprint)
+
+Product Owner: Ele que acompanha e faz a conexão com o cliente final
+Scrum master: Ele organiza a equipe dentro da métodologia scrum
+
+Pipelines:: Ao subir o código ao repositório, ele faz o build, teste, homologação (se tem que passar na equipe de qualidade, coisas mais subjetivas, não tem como automatizar isso) e operações/release
+Entrega Contínua: Deve ter a aprovação humana
+Deploy Contínuo: Sem a parte de homologação
+Azure: Criar repositório, criar pipeline, triggers>enable continuous integration (já tem várias pré-montados, com comandos específicos para cada linguagem), da até para criar maquina virtual para fazer testes, na
