@@ -1,0 +1,15 @@
+_-História: Nome, contexto histórico, empresas pioneiras, empresas que usam agora
+Critérios e regras: papeis (scrum master), como funciona, regras (reuniões), ordem de sequencia, ciclo, áreas de aplicação
+_-Certificações: Como, empresa que fornece, como estudar, requisitos, tipos, preço
+Diferença do Agile: semelhanças, diferenças e qual usar em cada caso
+
+Nome: O Scrum - scrimmage (basquete: 5x5) (rugby: é uma linha imaginária transversal que corta o campo e se posiciona entre a linha defensiva e a linha ofensiva, e os times não podem ultrapassar essa linha antes do começo da jogada) - é um método de reinício de jogada no rugby, onde os jogadores dos dois times se juntam com a cabeça abaixada e se empurram com o objetivo de ganhar a posse de bola
+
+História: foi feito como um estilo de gerenciamento de produtos em empresas de fabricação de automóveis e produtos de consumo, por Takeuchi e Nonaka no artigo "The New Product Development Game" (Harvard Business Review, 1986). Eles notaram que projetos usando equipes pequenas e multidisciplinares produziram os melhores resultados, e associaram estas equipes altamente eficazes à formação Scrum do Rugby
+Essa técnica junta o toyotismo (aumenta a produtividade e a eficiência, evitando o desperdício sem criar estoque) com o estudo feito por Hirotaka Takeuchi e Ikujiro Nonaka.
+Jeff Sutherland, John Scumniotales e Jeff McKenna conceberam, documentaram e implementaram o Scrum, na empresa Easel Corporation em 1993, incorporando os estilos de gerenciamento observados por Takeuchi e Nonaka.
+A função primária do Scrum é ser utilizado para o gerenciamento de projetos de desenvolvimento de software. Ele tem sido usado com sucesso para isso
+
+Certificados: Existem vários, duas instituições famosas são a scrum.org e a scrumallience.org, ambas oferecem certificados de três níveis:
+scrum.org - Professional Scrum Master™ I até III, Professional Scrum Product Owner™ I até III, Professional Scrum Development™, Scaled Professional Scrum™, Professional Scrum™ with Kanban e Professional Scrum™ with User Experience
+scrumallience.org (vai de certified, Advanced Certified e  Certified Scrum Professional) - ScrumMaster, Scrum Product Owner, For Developers e Certified Scrum Trainer
