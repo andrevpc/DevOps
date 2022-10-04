@@ -1,0 +1,134 @@
+Versionamento: Ele não sobescreve e sim cria versões
+Team Foundation Service (TFS) -> Visual Studio Online -> Visual Studio Team Service -> Azure DevOps
+
+Diferença dele com o GitHub: TFS: Centralizado - Direto para o servidor
+GitHub: Descentralizado - Fica no repositório até você dar push (mandar para o servidor)
+Git é quem faz o versionamento (Gerencia no Azure e no GitHub, GitHub é o servidor
+
+Comandos Git Bash:
+DISRCT@CTPC3622 MINGW64 ~
+$ cd desktop #abrir a pasta desktop
+
+DISRCT@CTPC3622 MINGW64 ~/desktop
+$ mkdir André #criar pasta André
+
+DISRCT@CTPC3622 MINGW64 ~/desktop
+$ cd André #Abrir pasta André
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André
+$ git version #saber versão do seu git
+git version 2.37.0.windows.1
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André
+$ git init #criar um repositório na pasta
+Initialized empty Git repository in C:/Users/disrct/Desktop/André/.git/
+
+#ctrl + l: "apaga" os comandos antigos
+#arquivo adicionado manualmente na pasta (arquivo.txt)
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (master)
+$ git status #Ver a situação do git
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        arquivo.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (master)
+$ git add arquivo.txt #adicionar arquivo no git
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   arquivo.txt
+
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (master)
+$ git commit -m "primeiro commit" #reconhece como "checkpoint"
+[master (root-commit) af8a863] primeiro commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 arquivo.txt
+#quando der erro por falta de quem está salvando (muitas pessoas usando o mesmo arquivo)
+usar git config --global user.name "Your Name" e git config --global user.email a@g.com e para verificar qual o usuario já logado:
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (master)
+$ git config --get user.name
+ThiagoPedron
+
+#alterando algo no txt a mão
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   arquivo.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (master)
+$ git add arquivo.txt
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (master)
+$ git commit -m "Alteração do texto"
+[master 9e87811] Alteração do texto
+ 1 file changed, 1 insertion(+)
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (master)
+$ git log #mostra os commits feitos
+commit 9e87811c30cd496837331201c4c1cad33724dc51 (HEAD -> master)
+Author: ThiagoPedron <thiagopedron70@gmail.com>
+Date:   Tue Oct 4 10:01:08 2022 -0300
+
+    Alteração do texto
+
+commit af8a86398a422ccd299849c48b270f74eda29e5b
+Author: ThiagoPedron <thiagopedron70@gmail.com>
+Date:   Tue Oct 4 09:39:13 2022 -0300
+
+    primeiro commit 
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/and (master)
+$ git restore arq.txt #volta para a versão de add anterior
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/and (master)
+$ git reset arq.txt
+Unstaged changes after reset:
+M       arq.txt
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/and (master)
+$ git restore arq.txt #com essa junção volta ao ultimo commit
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/and (master)
+$ cd .. #para sair da pasta
+
+DISRCT@CTPC3622 MINGW64 ~/desktop
+$ mkdir servidor
+
+DISRCT@CTPC3622 MINGW64 ~/desktop (BARE:master)
+$ cd servidor
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/servidor (BARE:master)
+$ git init --bare #servidor só com commit
+Initialized empty Git repository in C:/Users/disrct/Desktop/servidor/
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/servidor (master)
+$ git remote add local c:/users/disrct/desktop/servidor #linkar servidor com local
+
+
+
