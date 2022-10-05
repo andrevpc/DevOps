@@ -1,0 +1,368 @@
+DISRCT@CTPC3622 MINGW64 ~
+$ cd desktop
+
+DISRCT@CTPC3622 MINGW64 ~/desktop (BARE:master)
+$ mkdir André
+
+DISRCT@CTPC3622 MINGW64 ~/desktop (BARE:master)
+$ cd André
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (BARE:master)
+$ git init
+Initialized empty Git repository in C:/Users/disrct/Desktop/André/.git/
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+#criei txt
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        teste.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (master)
+$ git add teste.txt
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   teste.txt
+
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (master)
+$ git log --oneline
+fatal: your current branch 'master' does not have any commits yet
+
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (master)
+$ git commit -m"ponto inicial"
+[master (root-commit) 3c57f0f] ponto inicial
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 teste.txt
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (master)
+$ git log --oneline
+3c57f0f (HEAD -> master) ponto inicial
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (master)
+$ cd ..
+
+DISRCT@CTPC3622 MINGW64 ~/desktop (BARE:master)
+$ mkdir servidor
+
+DISRCT@CTPC3622 MINGW64 ~/desktop (BARE:master)
+$ cd servidor
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/servidor (BARE:master)
+$ git init --bare
+Initialized empty Git repository in C:/Users/disrct/Desktop/servidor/
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/servidor (BARE:master)
+$ cd ..
+
+DISRCT@CTPC3622 MINGW64 ~/desktop (BARE:master)
+$ cd André
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (master)
+$ git remote add local ../servidor #local é o nome escolhido, colocar origin (nome auto)
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (master)
+$ git remote
+local
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (master)
+$ cd ..
+
+DISRCT@CTPC3622 MINGW64 ~/desktop (BARE:master)
+$ mkdir ana
+
+DISRCT@CTPC3622 MINGW64 ~/desktop (BARE:master)
+$ cd ana
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/ana (BARE:master)
+$ git clone ../servidor
+Cloning into 'servidor'...
+warning: You appear to have cloned an empty repository.
+done.
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/ana (BARE:master)
+$ ls
+servidor/
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/ana (BARE:master)
+$ git clone ../servidor anarepo
+Cloning into 'anarepo'...
+warning: You appear to have cloned an empty repository.
+done.
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/ana (BARE:master)
+$ ls
+anarepo/  servidor/
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/ana (BARE:master)
+$ cd anarepo
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/ana/anarepo (master)
+$ ls
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/ana/anarepo (master)
+$ cd ../../guilherme
+bash: cd: ../../guilherme: No such file or directory
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/ana/anarepo (master)
+$ cd ../../André
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (master)
+$ git remote
+local
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (master)
+$ git push local master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 217 bytes | 54.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To ../servidor
+ * [new branch]      master -> master
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (master)
+$ cd ../ana/anarepo
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/ana/anarepo (master)
+$ git pull origin master
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 197 bytes | 4.00 KiB/s, done.
+From C:/Users/disrct/Desktop/ana/../servidor
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/ana/anarepo (master)
+$ ls
+teste.txt
+
+#podemos criar um arquivo python e abrir o VS direto pelo git bash
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop (BARE:master)
+$ mkdir minhaPasta
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop (BARE:master)
+$ cd mi
+Microsoft Teams.lnk  minhaPasta/
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop (BARE:master)
+$ cd minhaPasta/
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/minhaPasta (BARE:master)
+$ touch main.py
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/minhaPasta (BARE:master)
+$ code .
+
+#editando no VS
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/minhaPasta (BARE:master)
+$ cat main.py
+oi
+andre
+
+#Entrando no VSCode e abrindo o arquivo André, podemos editar o teste.txt e usando a branch com o git bash aberto, usando ctrl+' abrimos o terminal no VSC, abrindo a pasta anarepo (botão direito no explorer>add folder to..., veremos que ana repo está vazio (não commitamos), para resolver vamos no bash
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/André (master)
+$ git push local master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 252 bytes | 50.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To ../servidor
+   3c57f0f..41aecd0  master -> master
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/André (master)
+$ cd ../ana/anarepo
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/ana/anarepo (master)
+$ git remote
+origin
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/ana/anarepo (master)
+$ git pull origin master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 232 bytes | 5.00 KiB/s, done.
+From C:/Users/disrct/Desktop/ana/../servidor
+ * branch            master     -> FETCH_HEAD
+   3c57f0f..41aecd0  master     -> origin/master
+Updating 3c57f0f..41aecd0
+Fast-forward
+ teste.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/ana/anarepo (master)
+$ git log --oneline
+41aecd0 (HEAD -> master, origin/master) Primeiro commit
+3c57f0f ponto inicial
+
+#fazendo o contrário
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/ana/anarepo (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 258 bytes | 43.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To C:/Users/disrct/Desktop/ana/../servidor
+   3fb237e..f8ff78c  master -> master
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/ana/anarepo (master)
+$ cd ../../André
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/André (master)
+$ git pull local master
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), 465 bytes | 7.00 KiB/s, done.
+From ../servidor
+ * branch            master     -> FETCH_HEAD
+   41aecd0..f8ff78c  master     -> local/master
+Updating 41aecd0..f8ff78c
+Fast-forward
+ teste.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+#quando estou no meu servidor é local, no da ana é origin, para padronizar (git remote mostra qual o nome):
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/André (master)
+$ git remote
+local
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/André (master)
+$ git remote rename local server
+Renaming remote references: 100% (1/1), done.
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/André (master)
+$ git remote
+server
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/André (master)
+$ cd ../ana/anarepo
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/ana/anarepo (master)
+$ git remote
+origin
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/ana/anarepo (master)
+$ git remote rename origin server
+Renaming remote references: 100% (1/1), done.
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/ana/anarepo (master)
+$ git remote
+server
+
+#criando branch no André e entrando nela
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/André (master)
+$ git checkout -b novalinha
+Switched to a new branch 'novalinha'
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/André (novalinha)
+$ git checkout master
+Switched to branch 'master'
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/André (master)
+$ git checkout novalinha
+Switched to branch 'novalinha'
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/André (novalinha)
+$ git branch
+  master
+* novalinha
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/André (novalinha)
+$ cd ../ana/anarepo
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/ana/anarepo (master)
+$ git checkout -b novalinha
+Switched to a new branch 'novalinha'
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/ana/anarepo (novalinha)
+$ git push server master
+Everything up-to-date
+
+#fazendo o push
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/ana/anarepo (novalinha)
+$ git push server master #branch antiga
+Everything up-to-date
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/ana/anarepo (novalinha)
+$ git push server novalinha
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 269 bytes | 53.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To C:/Users/disrct/Desktop/ana/../servidor
+ * [new branch]      novalinha -> novalinha
+
+#mudando a branch do André (já criada) e puxando a alteração da ana
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/ana/anarepo (novalinha)
+$ cd ../../André
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/André (master)
+$ git checkout novalinha
+Switched to branch 'novalinha'
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/André (novalinha)
+$ git pull server novalinha
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 249 bytes | 7.00 KiB/s, done.
+From ../servidor
+ * branch            novalinha  -> FETCH_HEAD
+ * [new branch]      novalinha  -> server/novalinha
+Updating f8ff78c..d4ac489
+Fast-forward
+ teste.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+#fazendo o merge para que as duas branch fiquem iguais (linha mudada é diferente da escrita
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/ana/anarepo (master)
+$ git merge master novalinha
+Updating f8ff78c..d4ac489
+Fast-forward
+ teste.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+#mudando a linha (como ele lida com o conflito de linhas)
+
+DISRCT@CTPC3622 MINGW64 ~/Desktop/ana/anarepo (master)
+$ git merge novalinha
+Auto-merging teste.txt
+CONFLICT (content): Merge conflict in teste.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+#no vs mostra como arrumar
