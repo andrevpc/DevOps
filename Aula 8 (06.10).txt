@@ -1,0 +1,165 @@
+DISRCT@CTPC3622 MINGW64 ~
+$ cd desktop
+
+DISRCT@CTPC3622 MINGW64 ~/desktop (BARE:master)
+$ mkdir André
+
+DISRCT@CTPC3622 MINGW64 ~/desktop (BARE:master)
+$ cd André
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (BARE:master)
+$ git init
+Initialized empty Git repository in C:/Users/disrct/Desktop/André/.git/
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (master)
+$ git branch -m "main" #mudando nome master para main
+
+#colocando arquivo readme.md (criando um arquivo txt e mudando o final), funciona como uma descrição do repositório, ele abre direto no VSC, lá nós escrevemos "Este é um projeto de git e github" e commitamos
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (main)
+$ git log --oneline
+ea5500d (HEAD -> main) Primeiro commit
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (main)
+$ cat readme.md
+Este é um projeto de git e github
+
+#criamos 3 arquivos novos, para adiciona-los de uma vez
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        doc1.txt
+        doc2.txt
+        doc3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (main)
+$ git add .
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   doc1.txt
+        new file:   doc2.txt
+        new file:   doc3.tx
+
+#o comando touch doc1.txt doc2.txt... cria arquivos, rm doc1.txt... remove, com os docs apagados podemos usar, para voltar um commit usamos o git restore . , ou ao invés do . colocamos o nome do arquivo, se fizermos git rm não podemos voltar (excluido para sempre)
+#commitei duas versões novas e adicionei uma nova linha sem commitar (só salvar)
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (main)
+$ git restore readme.md #tira a linha que não commitei
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (main)
+$ git add readme.md #mudei algo e adicionei no git, sem commitar
+
+#quero voltar, tiro do add e restore
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    doc1.txt
+        deleted:    doc2.txt
+        deleted:    doc3.txt
+        modified:   readme.md
+
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (main)
+$ git restore --staged readme.md
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    doc1.txt
+        deleted:    doc2.txt
+        deleted:    doc3.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   readme.md
+
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (main)
+$ git restore readme.md
+
+#alterei e commitei, quero voltar, restore é só quando não commitado
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (main)
+$ cat readme.md
+Este é um projeto de git e github
+versão 2 do documento
+alterei e commitei
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (main)
+$ git log --oneline
+cb20a26 (HEAD -> main) commitei com erros
+7e45af3 Versão 3
+3d6b494 Versão 2
+ea5500d Primeiro commit
+
+#o código em amarelo (na frente do commit é como se fosse o id do commit)
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (main)
+$ git revert 7e45af3
+error: Your local changes to the following files would be overwritten by merge:
+        readme.md
+Please commit your changes or stash them before you merge.
+Aborting
+fatal: revert failed
+
+#agora é só ver no VSC (conflito de linhas) - mas ele volta para o commit anterior ao escolhido
+#se quiser voltar para a versão mais recente
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (main|REVERTING)
+$ git revert --skip
+
+#para ver uma versão antiga (só ver), voltamos e ele cria uma nova branch (marvel: ramificações)
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (main)
+$ git checkout 3d6b494
+Note: switching to '3d6b494'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 3d6b494 Versão 2
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André ((3d6b494...))
+$ cat readme.md
+Este é um projeto de git e github
+
+#podemos criar uma branch a partir dessa temporaria
+#para voltar na main
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André ((3d6b494...))
+$ git checkout main
+Previous HEAD position was 3d6b494 Versão 2
+Switched to branch 'main'
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/André (main)
+$ cat readme.md
+Este é um projeto de git e github
+Versão nova 1
+VS 2
+VS 3
