@@ -1,0 +1,71 @@
+#clonando um repositório
+
+DISRCT@CTPC3622 MINGW64 ~
+$ cd desktop/and
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/and
+$ git clone https://github.com/andrevpc/teste.git
+Cloning into 'teste'...
+warning: You appear to have cloned an empty repository.
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/and
+$ cd teste
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/and/teste (main)
+$ git add .
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/and/teste (main)
+$ git commit -m "teste"
+[main (root-commit) cb09b7a] teste
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 readme.md
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/and/teste (main)
+$ git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 207 bytes | 41.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/andrevpc/teste.git
+ * [new branch]      main -> main
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/and/teste (main)
+$ git remote -v #para ver onde vai o commit
+origin  https://github.com/andrevpc/teste.git (fetch)
+origin  https://github.com/andrevpc/teste.git (push)
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/and/teste (main)
+$ ls #o que tem na pasta
+readme.md
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/and/teste (main)
+$ git checkout -b"ramif" #criar branch
+Switched to a new branch 'ramif'
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/and/teste (rami1)
+$ git checkout main #voltando para a main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/and/teste ((49a91c7...))
+$ git checkout e4ac148 #voltando para commmit antigo
+Previous HEAD position was 49a91c7 commit 3
+HEAD is now at e4ac148 commit 2
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/and/teste ((e4ac148...))
+$ git switch -c "rami1" #criar branch a partir dele
+Switched to a new branch 'rami1'
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/and/teste (rami1)
+$ git push --set-upstream origin rami1 #push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 253 bytes | 50.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'rami1' on GitHub by visiting:
+remote:      https://github.com/andrevpc/teste/pull/new/rami1
+remote:
+To https://github.com/andrevpc/teste.git
+ * [new branch]      rami1 -> rami1
+branch 'rami1' set up to track 'origin/rami1'.

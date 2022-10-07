@@ -1,0 +1,203 @@
+Prova:
+Crie um repositório PUBLICO no github chamado BoschDevOps
+Clone esse repositório em uma pasta no seu computador, criando assim um repositório local
+
+Crie um txt chamado atividade e escreva a seu primeiro nome
+salve, faça o add e faça um commit com a mensagem “iniciando a atividade”
+
+MANTENHA a linha 1 e inclua seu nome completo na linha 2
+Faça o add e um commit com a mensagem “passo 2”
+Faça um push desse arquivo para o servidor no git hub
+
+NO GIT HUB:
+Altere o documento incluindo na linha 3 sua data de nascimento 
+
+Faça o commit com a mensagem “alteração no servidor”
+Faça o pull para o repositório local
+
+NO SERVIDOR LOCAL:
+Crie um novo documento txt chamado doc2, nele escreva “Cheguei até aqui”
+Faça o add e o commit com a mensagem “adicionei um novo arquivo”
+Faça o push para o servidor
+
+Crie uma nova branch chamada “B2”
+Nessa branch altere o doc2 escrevendo “alteração na outra branch” na linha 2 
+Faça o add/commit com a mensagem “commit na B2”
+Faça o push dessa branch para o servidor
+
+AINDA NA BRANCH B2:
+Escreva na LINHA 3 do DOC2 a frase “alterei na B2”
+Faça o add/commit com a mensagem “alteração na branch B2”
+
+
+
+Volte para a branch main
+No DOC2 escreva a a frase “alterei na main” NA LINHA 3
+(A ideia é escrever frases diferentes, na mesma linha, porem em branchs diferentes)
+Faça o add/commit com a mensagem “alteração na main”
+
+AINDA NA MAIN:
+Faça um merge com a B2
+Irá acontecer um conflito. Resolva o conflito deixando ambas as frases, uma em cada linha.
+Faça o commit com a mensagem padrão sugerida 
+
+Faça o push da branch main
+Faça o push da branch B2
+
+Envie o link do seu repositório no github para ggranzotto.lemos@gmail.com
+No assunto do email, coloque seu nome
+
+Bash
+DISRCT@CTPC3622 MINGW64 ~
+$ cd desktop/Prova
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/Prova
+$ git clone https://github.com/andrevpc/BoschDevOps.git
+Cloning into 'BoschDevOps'...
+warning: You appear to have cloned an empty repository.
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/Prova
+$ cd BoschDevOps
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/Prova/BoschDevOps (main)
+$ git add .
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/Prova/BoschDevOps (main)
+$ git commit -m"iniciando a atividade"
+[main (root-commit) db1a395] iniciando a atividade
+ 1 file changed, 1 insertion(+)
+ create mode 100644 atividade .txt
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/Prova/BoschDevOps (main)
+$ git add .
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/Prova/BoschDevOps (main)
+$ git commit -m"passo 2"
+[main cec1953] passo 2
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/Prova/BoschDevOps (main)
+$ git push
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (6/6), 471 bytes | 94.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/andrevpc/BoschDevOps.git
+ * [new branch]      main -> main
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/Prova/BoschDevOps (main)
+$ git pull
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), 1.20 KiB | 26.00 KiB/s, done.
+From https://github.com/andrevpc/BoschDevOps
+   cec1953..05386fc  main       -> origin/main
+Updating cec1953..05386fc
+Fast-forward
+ atividade .txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/Prova/BoschDevOps (main)
+$ git add .
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/Prova/BoschDevOps (main)
+$ git commit -m"adicionei um novo arquivo"
+[main 0f5d2ad] adicionei um novo arquivo
+ 1 file changed, 1 insertion(+)
+ create mode 100644 doc2.txt
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/Prova/BoschDevOps (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 303 bytes | 75.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/andrevpc/BoschDevOps.git
+   05386fc..0f5d2ad  main -> main
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/Prova/BoschDevOps (main)
+$
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/Prova/BoschDevOps (main)
+$ git checkout -b"B2"
+Switched to a new branch 'B2'
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/Prova/BoschDevOps (B2)
+$ git push
+fatal: The current branch B2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin B2
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/Prova/BoschDevOps (B2)
+$ git push --set-upstream origin B2
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 318 bytes | 63.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'B2' on GitHub by visiting:
+remote:      https://github.com/andrevpc/BoschDevOps/pull/new/B2
+remote:
+To https://github.com/andrevpc/BoschDevOps.git
+ * [new branch]      B2 -> B2
+branch 'B2' set up to track 'origin/B2'.
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/Prova/BoschDevOps (B2)
+$ git checkout main
+Already on 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/Prova/BoschDevOps (main)
+$ git merge B2
+Auto-merging doc2.txt
+CONFLICT (content): Merge conflict in doc2.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/Prova/BoschDevOps (main|MERGING)
+$
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/Prova/BoschDevOps (main)
+$ git push
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (9/9), 915 bytes | 130.00 KiB/s, done.
+Total 9 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/andrevpc/BoschDevOps.git
+   0f5d2ad..a620194  main -> main
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/Prova/BoschDevOps (main)
+$ git push B2
+fatal: 'B2' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/Prova/BoschDevOps (main)
+$ git checkout B2
+Switched to branch 'B2'
+Your branch is ahead of 'origin/B2' by 1 commit.
+  (use "git push" to publish your local commits)
+
+DISRCT@CTPC3622 MINGW64 ~/desktop/Prova/BoschDevOps (B2)
+$ git push
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/andrevpc/BoschDevOps.git
+   012d157..983e64f  B2 -> B2
